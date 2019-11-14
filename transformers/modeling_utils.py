@@ -847,3 +847,14 @@ def prune_layer(layer, index, dim=None):
         return prune_conv1d_layer(layer, index, dim=1 if dim is None else dim)
     else:
         raise ValueError("Can't prune layer of class {}".format(layer.__class__))
+
+
+##################################
+# modeling_utils for KOGPT       #
+##################################
+
+
+class KO_Conv1D(nn.Linear):
+    def reset_parameters(self):
+        nn.init.normal_(self.weight, std=0.02)
+        nn.init.zeros_(self.bias)

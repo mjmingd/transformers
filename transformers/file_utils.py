@@ -67,7 +67,7 @@ except (AttributeError, ImportError):
 PYTORCH_TRANSFORMERS_CACHE = PYTORCH_PRETRAINED_BERT_CACHE  # Kept for backward compatibility
 TRANSFORMERS_CACHE = PYTORCH_PRETRAINED_BERT_CACHE  # Kept for backward compatibility
 
-WEIGHTS_NAME = "pytorch_model.bin"
+WEIGHTS_NAME = "pytorch_model.pt"
 TF2_WEIGHTS_NAME = 'tf_model.h5'
 TF_WEIGHTS_NAME = 'model.ckpt'
 CONFIG_NAME = "config.json"
